@@ -39,7 +39,7 @@ final class GettingProductListTests: XCTestCase, GettingProductList {
 
         // assert
         XCTAssert(productGatewayMock.getProductListCalled)
-        XCTAssertEqual(getProductListOutput.events.first?.value.element?.items.count, 1)
+        XCTAssertEqual(getProductListOutput.firstEventElement?.items.count, 1)
     }
     
     func test_getProductList_fail() {
